@@ -5,16 +5,20 @@ Aplicación móvil Flutter para la venta de boletos de eventos artísticos (Teat
 
 ## Demo
 
-[![Watch the video](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/demo.png)](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/demo.mp4)
+<video src="assets/demo.mp4" width="400" controls>
+  Your browser does not support the video tag.
+</video>
 
 
 ## Tests
 
-[![Watch the video](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/tests.png)](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/tests.mp4)
+<video src="assets/tests.mp4" width="400" controls>
+  Your browser does not support the video tag.
+</video>
 
 ## Analytics
 
-![Watch the video](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/analytics.png)
+![Analytics](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/analytics.png)
 
 
 
