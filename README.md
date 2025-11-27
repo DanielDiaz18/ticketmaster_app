@@ -5,16 +5,19 @@ Aplicación móvil Flutter para la venta de boletos de eventos artísticos (Teat
 
 ## Demo
 
-<video src="assets/demo.mp4" width="400" controls>
-  Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/0709038a-24ed-46ff-a848-eb67438d7d0d
+
 
 
 ## Tests
 
-<video src="assets/tests.mp4" width="400" controls>
-  Your browser does not support the video tag.
-</video>
+
+
+https://github.com/user-attachments/assets/016553ab-380d-477b-ab29-543ac262c7ba
+
+
 
 ## Analytics
 
