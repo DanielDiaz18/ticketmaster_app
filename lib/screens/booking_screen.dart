@@ -59,50 +59,53 @@ class _BookingScreenState extends State<BookingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        title: Text(widget.venue.name),
-        backgroundColor: Colors.black38,
-        foregroundColor: Colors.white,
-      ),
-      body: Column(
-        children: [
-          CachedNetworkImage(
-            imageUrl: widget.venue.img,
-            width: double.infinity,
-            fit: BoxFit.cover,
-          ),
-          Flexible(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  const SizedBox(height: 16),
-                  _buildDateSelection(),
-                  if (_selectedDate != null) ...[
-                    const SizedBox(height: 16),
-                    _buildEventSelection(),
-                  ],
-                  if (_selectedEvent != null) ...[
-                    const SizedBox(height: 16),
-                    _buildTicketQuantitySelector(),
-                    const SizedBox(height: 16),
-                    _buildTotalAmount(),
-                    const SizedBox(height: 24),
-                    _buildPaymentMethodSelection(),
-                  ],
-                  if (_selectedPaymentMethod != null) ...[
-                    const SizedBox(height: 16),
-                    _buildPaymentForm(),
-                    const SizedBox(height: 24),
-                    _buildPurchaseButton(),
-                  ],
-                ],
+      body: NestedScrollView(
+        headerSliverBuilder: (context, shrink) => [
+          SliverAppBar(
+            pinned: true,
+            expandedHeight: 200,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text(
+                widget.venue.name,
+                style: TextStyle(color: !shrink ? Colors.white : Colors.black),
+              ),
+              background: CachedNetworkImage(
+                imageUrl: widget.venue.img,
+                width: double.infinity,
+                fit: BoxFit.cover,
               ),
             ),
           ),
         ],
+        body: SingleChildScrollView(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 16),
+              _buildDateSelection(),
+              if (_selectedDate != null) ...[
+                const SizedBox(height: 16),
+                _buildEventSelection(),
+              ],
+              if (_selectedEvent != null) ...[
+                const SizedBox(height: 16),
+                _buildTicketQuantitySelector(),
+                const SizedBox(height: 16),
+                _buildTotalAmount(),
+                const SizedBox(height: 24),
+                _buildPaymentMethodSelection(),
+              ],
+              if (_selectedPaymentMethod != null) ...[
+                const SizedBox(height: 16),
+                _buildPaymentForm(),
+                const SizedBox(height: 24),
+                _buildPurchaseButton(),
+              ],
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -502,7 +505,8 @@ class _BookingScreenState extends State<BookingScreen> {
                 leading: Icon(Icons.confirmation_num),
                 title: Text('Boleto para ${_getEventTitle(_selectedEvent)}'),
                 subtitle: Text(
-                  'Fecha: ${DateFormat('dd/MM/yyyy').format(tickets.first.eventDate)} - Hora: $_selectedTime',
+                  DateFormat.MMMMEEEEd().format(tickets.first.eventDate) +
+                      ' $_selectedTime hrs.',
                 ),
                 trailing: Text('X${tickets.length}'),
               ),

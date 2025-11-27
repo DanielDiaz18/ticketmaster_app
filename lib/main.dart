@@ -1,13 +1,17 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:ticketmaster_app/screens/category_screen.dart';
 import 'core/analytics/analytics_service.dart';
 import 'services/inventory_service.dart';
 import 'providers/cart_provider.dart';
 
-void main() {
+Future<void> main() async {
+  Intl.defaultLocale = 'es';
+  await initializeDateFormatting();
   runApp(
     MultiProvider(
       providers: [
