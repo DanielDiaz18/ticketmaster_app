@@ -2,6 +2,24 @@
 
 Aplicación móvil Flutter para la venta de boletos de eventos artísticos (Teatro, Cine, Museos) con validaciones de negocio, sistema de pagos, pruebas unitarias y métricas de analytics.
 
+
+## Demo
+
+[![Watch the video](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/demo.png)](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/demo.mp4)
+
+
+## Tests
+
+[![Watch the video](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/tests.png)](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/tests.mp4)
+
+## Analytics
+
+![Watch the video](https://raw.githubusercontent.com/DanielDiaz18/ticketmaster_app/main/assets/analytics.png)
+
+
+
+
+---
 ## 📋 Características
 
 ### Categorías de Eventos
